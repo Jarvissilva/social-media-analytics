@@ -6,12 +6,4 @@ import dbclient from "@/utils/dbclient";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: MongoDBAdapter(dbclient),
   providers: [Google],
-
-  callback: {
-    async signIn({ user, account, profile }) {
-      console.log("hello");
-
-      console.log(user, account, profile);
-    },
-  },
 });
