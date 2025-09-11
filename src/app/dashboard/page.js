@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { auth } from "@/utils/auth";
 import LogoutButton from "@/components/logout-button";
+import { redirect } from "next/navigation";
 
 export default async function Page() {
   const session = await auth();
-  if (!session) return <div>Not authenticated</div>;
+  if (!session) redirect("/");
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
