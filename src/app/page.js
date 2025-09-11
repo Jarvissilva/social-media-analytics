@@ -1,6 +1,10 @@
 import { signIn } from "@/utils/auth";
+import { redirect } from "next/navigation";
 
-export default function SignIn() {
+export default async function SignIn() {
+  const session = await auth();
+  if (session) redirect("/dashboard");
+
   return (
     <form
       action={async () => {
