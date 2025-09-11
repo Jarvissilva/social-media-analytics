@@ -1,0 +1,30 @@
+services:
+
+  nextapp:
+
+    build: .
+    network_mode: host
+
+
+      
+
+  mongo:
+    image: mongo
+    container_name: "mongo_database"
+    ports:
+      - 27017:27017
+    
+    volumes:
+      - "./.data:/data/db"
+
+
+  mongo-express:
+      network_mode: host
+      image: mongo-express
+      # ports:
+      #  - 8081:8081
+      environment:
+        ME_CONFIG_MONGODB_URL: mongodb://localhost:27017/oauth-demo
+        ME_CONFIG_BASICAUTH_ENABLED: true
+        ME_CONFIG_BASICAUTH_USERNAME: default
+        ME_CONFIG_BASICAUTH_PASSWORD: password

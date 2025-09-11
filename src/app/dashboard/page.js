@@ -8,8 +8,8 @@ export default async function Page() {
   if (!session) redirect("/");
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen bg-gray-900">
+      <div className="bg-slate-600 text-white shadow-lg rounded-2xl p-8 w-full max-w-md">
         <div className="flex flex-col items-center">
           <Image
             width={50}
@@ -19,12 +19,12 @@ export default async function Page() {
             className="w-20 h-20 rounded-full mb-4"
           />
           <h2 className="text-xl font-bold">{session.user?.name}</h2>
-          <p className="text-gray-600">{session.user?.email}</p>
+          <p className="text-white">{session.user?.email}</p>
         </div>
 
         <hr className="my-6" />
 
-        <div className="space-y-2 text-sm text-gray-800">
+        <div className="space-y-2 text-sm text-white">
           <p>
             <span className="font-semibold">User ID:</span> {session.user?.id}
           </p>
