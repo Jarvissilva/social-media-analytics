@@ -8,7 +8,9 @@ export default async function SignIn() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
       <div className="bg-gray-600 shadow-lg rounded-2xl p-8 w-full max-w-md text-center">
-        <h1 className="text-2xl font-extrabold text-white mb-9">Sign in to Continue</h1>
+        <h1 className="text-2xl font-extrabold text-white mb-9">
+          Sign in to Continue
+        </h1>
 
         {/* Google */}
         <form
@@ -50,8 +52,6 @@ export default async function SignIn() {
             Sign in with Facebook
           </button>
         </form>
-
-
 
         <form
           action={async () => {
