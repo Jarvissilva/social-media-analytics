@@ -15,5 +15,5 @@ jobs:
           node-version: '20.x'
       - run: ls
       - run: curl ifconfig.me
-      - run: docker compose build && docker compose up
+      - run: docker compose build 
 
