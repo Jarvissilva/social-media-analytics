@@ -17,7 +17,9 @@ jobs:
       - run: curl ifconfig.me
       - run: docker compose build 
 
+      - run: npm i
       - name: Run Eslint
         uses: stefanoeb/eslint-action@1.0.2
+
         
 
