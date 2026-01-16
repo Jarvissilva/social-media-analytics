@@ -19,7 +19,7 @@ jobs:
 
       - run: npm i
       - name: Run Eslint
-        uses: stefanoeb/eslint-action@1.0.2
+        uses: stefanoeb/eslint-action
 
         
 
